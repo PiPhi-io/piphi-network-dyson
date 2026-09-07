@@ -2,9 +2,9 @@
   "$schema": "./schema/piphi-manifest.schema.json",
   "manifest_version": "1.0",
   "id": "piphi-network-dyson",
-  "name": "Piphi Network Dyson",
+  "name": "Dyson",
   "version": "0.1.0",
-  "description": "PiPhi starter runtime for model-negotiated Dyson air treatment devices.",
+  "description": "Monitor and control capability-negotiated Dyson air treatment devices.",
   "metadata": {
     "generator": "piphi-network-create",
     "scaffold_version": "0.3.0",
@@ -133,5 +133,74 @@
         "default_widget": "tile"
       }
     }
-  ]
+  ],
+  "marketplace": {
+    "metadata_version": 2,
+    "display_name": "Dyson",
+    "summary": "Monitor and control capability-negotiated Dyson air treatment devices.",
+    "category": "air_quality",
+    "regions": [
+      "WW"
+    ],
+    "languages": [
+      "en"
+    ],
+    "publisher": {
+      "name": "PiPhi Network",
+      "website_url": "https://piphi.io",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-dyson/issues",
+      "security_contact": "support@piphi.io"
+    },
+    "access": [
+      {
+        "id": "local_network",
+        "label": "Local network access",
+        "reason": "Discovers or communicates with supported services and devices on the homeowner's local network.",
+        "required": true
+      },
+      {
+        "id": "credentials",
+        "label": "Account or device credentials",
+        "reason": "Authenticates only to the configured vendor account, service, or local device and keeps credentials out of state and diagnostics.",
+        "required": true
+      }
+    ],
+    "compatibility": [
+      {
+        "brand": "Dyson",
+        "model": "Supported connected air treatment devices"
+      }
+    ],
+    "documentation_url": "https://github.com/PiPhi-io/piphi-network-dyson",
+    "support_url": "https://github.com/PiPhi-io/piphi-network-dyson/issues",
+    "changelog_url": "https://github.com/PiPhi-io/piphi-network-dyson/releases",
+    "quality_tier": "unrated",
+    "governance": {
+      "schema_version": 1,
+      "publication_status": "draft",
+      "rollout_percent": 0,
+      "lifecycle_status": "active",
+      "qualification": {
+        "status": "unverified"
+      }
+    },
+    "device_types": [
+      "air purifier",
+      "fan",
+      "humidifier",
+      "heater"
+    ],
+    "protocols": [
+      "Dyson cloud API",
+      "MQTT",
+      "HTTPS"
+    ],
+    "discovery_methods": [
+      "account discovery",
+      "local device discovery"
+    ],
+    "connectivity": "hybrid",
+    "offline_support": "partial",
+    "privacy_url": "https://github.com/PiPhi-io/piphi-network-dyson/blob/main/docs/privacy.md"
+  }
 }
