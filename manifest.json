@@ -211,5 +211,8 @@
     "connectivity": "hybrid",
     "offline_support": "partial",
     "privacy_url": "https://github.com/PiPhi-io/piphi-network-dyson/blob/main/docs/privacy.md"
+  },
+  "onboarding": {
+    "mode": "account"
   }
 }
